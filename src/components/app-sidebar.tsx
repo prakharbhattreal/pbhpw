@@ -60,25 +60,16 @@ const items = [
 
 export function AppSidebar() {
   return (
-    <Sidebar variant="floating">
+    <Sidebar>
       <SidebarHeader>
         <SidebarMenu>
           <SidebarMenuItem>
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <SidebarMenuButton>
-                  Select Workspace
-                  <ChevronDown className="ml-auto" />
-                </SidebarMenuButton>
+                <span className="p-2">
+                  pbhtt
+                </span>
               </DropdownMenuTrigger>
-              <DropdownMenuContent className="w-[--radix-popper-anchor-width]">
-                <DropdownMenuItem>
-                  <span>Acme Inc</span>
-                </DropdownMenuItem>
-                <DropdownMenuItem>
-                  <span>Acme Corp.</span>
-                </DropdownMenuItem>
-              </DropdownMenuContent>
             </DropdownMenu>
           </SidebarMenuItem>
         </SidebarMenu>
@@ -109,7 +100,7 @@ export function AppSidebar() {
           <SidebarMenuItem>
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <SidebarMenuButton>
+                <SidebarMenuButton className="cursor-pointer">
                   <User2 /> Username
                   <ChevronUp className="ml-auto" />
                 </SidebarMenuButton>
@@ -119,15 +110,13 @@ export function AppSidebar() {
                 className="w-[--radix-popper-anchor-width]"
               >
                 <DropdownMenuItem>
-                  <span className="cursor-pointer hover:bg-gray-700">
-                    Account
-                  </span>
+                  <span className="cursor-pointer">Account</span>
                 </DropdownMenuItem>
                 <DropdownMenuItem>
-                  <span className="cursor-pointer hover:bg-gray-700">Billing</span>
+                  <span className="cursor-pointer">Billing</span>
                 </DropdownMenuItem>
                 <DropdownMenuItem>
-                  <span className="cursor-pointer hover:bg-gray-700">Sign out</span>
+                  <span className="cursor-pointer">Sign out</span>
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
