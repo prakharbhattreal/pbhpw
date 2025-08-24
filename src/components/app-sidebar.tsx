@@ -66,9 +66,15 @@ export function AppSidebar() {
           <SidebarMenuItem>
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <span className="p-2">
-                  pbhtt
-                </span>
+                <div className="p-2 text-lg font-semibold flex items-center gap-2">
+                  {/* Logo on the left */}
+                  <img
+                    src="/logo.png" // replace with your logo path
+                    alt="Logo"
+                    className="h-6 w-6"
+                  />
+                  <span>pbhtt</span>
+                </div>
               </DropdownMenuTrigger>
             </DropdownMenu>
           </SidebarMenuItem>
@@ -77,14 +83,17 @@ export function AppSidebar() {
 
       <SidebarContent>
         <SidebarGroup>
-          <SidebarGroupLabel>Application</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
               {items.map((item) => (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton asChild>
-                    <a href={item.url}>
-                      <item.icon />
+                    <a
+                      href={item.url}
+                      className="flex items-center gap-3 text-[15px] font-medium"
+                    >
+                      <item.icon className="h-5 w-5" />{" "}
+                      {/* Increased icon size */}
                       <span>{item.title}</span>
                     </a>
                   </SidebarMenuButton>
@@ -100,23 +109,24 @@ export function AppSidebar() {
           <SidebarMenuItem>
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <SidebarMenuButton className="cursor-pointer">
-                  <User2 /> Username
-                  <ChevronUp className="ml-auto" />
+                <SidebarMenuButton className="cursor-pointer text-[15px] font-medium">
+                  <User2 className="h-5 w-5" /> {/* Increased icon size */}
+                  Username
+                  <ChevronUp className="ml-auto h-4 w-4" />
                 </SidebarMenuButton>
               </DropdownMenuTrigger>
               <DropdownMenuContent
                 side="top"
-                className="w-[--radix-popper-anchor-width]"
+                className="w-[--radix-popper-anchor-width] flex flex-col gap-2 my-2"
               >
                 <DropdownMenuItem>
-                  <span className="cursor-pointer">Account</span>
+                  <span className="cursor-pointer p-2">Account</span>
                 </DropdownMenuItem>
                 <DropdownMenuItem>
-                  <span className="cursor-pointer">Billing</span>
+                  <span className="cursor-pointer p-2">Billing</span>
                 </DropdownMenuItem>
                 <DropdownMenuItem>
-                  <span className="cursor-pointer">Sign out</span>
+                  <span className="cursor-pointer p-2">Sign out</span>
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
