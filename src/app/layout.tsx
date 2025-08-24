@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "next-themes";
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/app-sidebar";
+import { Navbar } from "@/components/navbar";
 
 const firaSans = Fira_Sans({
   variable: "--font-fira-sans",
@@ -72,13 +73,13 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <SidebarProvider>
-            <div className="hidden lg:block w-64">
+          <SidebarProvider defaultOpen> 
+            <div className="lg:block">
               <AppSidebar />
             </div>
 
             <main className="w-full">
-              <SidebarTrigger className="lg:hidden" />
+              <Navbar />
               {children}
             </main>
           </SidebarProvider>

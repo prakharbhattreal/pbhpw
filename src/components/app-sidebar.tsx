@@ -61,7 +61,7 @@ const items = [
 export function AppSidebar() {
   return (
     <Sidebar>
-      <SidebarHeader>
+      <SidebarHeader className=" border-b">
         <SidebarMenu>
           <SidebarMenuItem>
             <DropdownMenu>
