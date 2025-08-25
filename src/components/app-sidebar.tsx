@@ -1,11 +1,12 @@
 import {
   Calendar,
-  ChevronDown,
   ChevronUp,
+  Cog,
+  Dribbble,
   Home,
-  Inbox,
   Search,
   Settings,
+  User,
   User2,
 } from "lucide-react";
 
@@ -21,7 +22,6 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
-import { RxDropdownMenu } from "react-icons/rx";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -33,18 +33,18 @@ import {
 const items = [
   {
     title: "Home",
-    url: "#",
+    url: "/",
     icon: Home,
   },
   {
-    title: "Inbox",
-    url: "#",
-    icon: Inbox,
+    title: "About",
+    url: "#about",
+    icon: User,
   },
   {
-    title: "Calendar",
-    url: "#",
-    icon: Calendar,
+    title: "Projects",
+    url: "#projects",
+    icon: Cog,
   },
   {
     title: "Search",
@@ -52,9 +52,9 @@ const items = [
     icon: Search,
   },
   {
-    title: "Settings",
+    title: "Socials",
     url: "#",
-    icon: Settings,
+    icon: Dribbble,
   },
 ];
 
@@ -104,13 +104,13 @@ export function AppSidebar() {
         </SidebarGroup>
       </SidebarContent>
 
-      <SidebarFooter>
+      {/* <SidebarFooter>
         <SidebarMenu>
           <SidebarMenuItem>
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <SidebarMenuButton className="cursor-pointer text-[15px] font-medium">
-                  <User2 className="h-5 w-5" /> {/* Increased icon size */}
+                  <User2 className="h-5 w-5" /> 
                   Username
                   <ChevronUp className="ml-auto h-4 w-4" />
                 </SidebarMenuButton>
@@ -132,7 +132,8 @@ export function AppSidebar() {
             </DropdownMenu>
           </SidebarMenuItem>
         </SidebarMenu>
-      </SidebarFooter>
+      </SidebarFooter> */}
+
     </Sidebar>
   );
 }
